@@ -1,0 +1,19 @@
+.container {
+  background: darkgray;
+  box-shadow: 5px 5px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  margin: 20px 0px;
+  background-color: aliceblue;
+  width: 80%;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+}

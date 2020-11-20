@@ -1,0 +1,6 @@
+.projectArea {
+  padding: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-gap: 20px 30px;
+}
