@@ -1,8 +1,19 @@
-.container {
-  height: 300px;
-  width: 250px;
+.modalBackGround {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageInput {
   background: darkgray;
-  box-shadow: 5px 5px black;
+  height: 177px;
+  width: 177px;
   display: flex;
   flex-direction: column;
   align-items: center;

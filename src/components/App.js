@@ -1,30 +1,28 @@
-import Header from './common/Header';
-import AddCard from './common/AddCard';
-
-import styles from './styles/App.module.scss'
-import { useState } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Collections from './common/Collections'
+import CharactersPage from './pages/CharactersPage';
+import ProjectsPage from './pages/ProjectsPage';
+import ScenesPage from './pages/ScenesPage';
+import SingleCharacterScene from './pages/SingleCharacterScene';
 
 function App() {
-  const [projects, setProjects] = useState([])
-  return (
-    <div>
-      <div>
-        <Header center={'Maria Continuity'} />
-      </div>
-      <div className={styles.projectArea}>
 
-        {
-          projects.map((prgt, i) => {
-            return (<div>
-              <AddCard buttonTitle={i} />
-            </div>)
-          })
-        }
-        <div >
-          <AddCard />
-        </div>
-      </div>
-    </div>
+  return (
+    <Switch>
+      <Route exact path={'/'}>
+        <ProjectsPage />
+      </Route>
+      <Route exact path={'/character/:characterId'}>
+        <ScenesPage />
+      </Route>
+      <Route exact path={'/scene/:sceneId'}>
+        <SingleCharacterScene />
+      </Route>
+      <Route exact path={'/project/:projectId'}>
+        <CharactersPage />
+      </Route>
+    </Switch>
+
   );
 }
 
